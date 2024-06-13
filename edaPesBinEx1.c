@@ -25,7 +25,7 @@ int pesquisaBinaria(int chave, int v[], int n, int* c) {
  	}
  	(*c)++;
  	 
-	return -1; // Indice invalido
+	return -1; // indice invalido
 }
 
 int main(const int arvc, const char* argv) {
