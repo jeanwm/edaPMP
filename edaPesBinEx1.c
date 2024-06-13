@@ -5,9 +5,9 @@
 int pesquisaBinaria(int chave, int v[], int n, int* c) {
  	int inicio = 0, meio, fim;
  	fim = n - 1;
+ 	*c  = 1;
  	
 	while (inicio <= fim) {
-		(*c)++;
  		meio = (inicio + fim) / 2;
  		
 		(*c)++;
@@ -15,15 +15,14 @@ int pesquisaBinaria(int chave, int v[], int n, int* c) {
  			return meio;
  			
  		} else if (chave < v[meio]) {
- 			(*c)++;
  			fim = meio - 1;
  			
  		} else {
- 			(*c)++;
  			inicio = meio + 1;
  		}
+ 		
+ 		(*c) += 2;
  	}
- 	(*c)++;
  	 
 	return -1; // indice invalido
 }
